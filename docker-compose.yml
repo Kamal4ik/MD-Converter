@@ -1,0 +1,11 @@
+services:
+  md-converter-bot:
+    build: .
+    image: md-converter-bot:latest
+    container_name: md-converter-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      # здесь хранится только выбор языка пользователей (langs.json)
+      # и временные файлы конвертации (автоочистка раз в час)
+      - ./data:/app/data
