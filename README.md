@@ -29,6 +29,10 @@ Word** (OMML). Исходное имя файла сохраняется: `repor
 cp .env.example .env
 nano .env                 # вставьте токен в TELEGRAM_BOT_TOKEN
 docker compose up -d --build
+
+для запуска бота через Python откройте командную строку
+cd "Путь к папке бота"
+python bot.py
 ```
 
 3. Отправьте боту любой `.md` файл (для пробы есть `samples/demo_ru.md`).
